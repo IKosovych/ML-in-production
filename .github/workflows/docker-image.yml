@@ -27,12 +27,3 @@ jobs:
           tags: ikosovych/week-1:latest    
           cache-from: type=registry,ref=ikosovych/week-1:buildcache
           cache-to: type=registry,ref=ikosovych/week-1:buildcache,mode=max
-
-      - name: Initialize Python 3.7
-        uses: actions/setup-python@v1
-        with:
-            python-version: 3.7
-      - name: Install dependencies
-      run: |
-          python -m pip install --upgrade pip
-          pip install flake8            
