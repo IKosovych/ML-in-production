@@ -1,0 +1,27 @@
+# Setup 
+
+```
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+In case of error
+```
+Building wheel for aiohttp (PEP 517) ... error
+```
+You need to upgrade pip
+```
+pip install --upgrade pip
+```
+
+# MINIO 
+
+Training process
+
+```
+docker build -t news6 .
+docker run --memory="4g" news6
+```
+
+Logs
+[Logs can be found here](https://wandb.ai/ihor/project-test2?workspace=user-ihor)

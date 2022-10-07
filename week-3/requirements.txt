@@ -1,0 +1,9 @@
+pandas==1.5.0
+numpy==1.23.3
+transformers==4.22.2
+torch
+torchaudio
+torchsummary==1.5.1
+torchtext==0.13.1
+torchvision
+wandb==0.13.3
