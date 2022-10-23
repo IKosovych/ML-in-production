@@ -21,7 +21,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: 1/
+          context: week-1/
           file: week-1/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/week-1:latest    
