@@ -5,7 +5,6 @@ from urllib.request import urlopen
 import pytest
 import pandas as pd
 import great_expectations
-from great_expectations.dataset.pandas_dataset import PandasDataset
 
 
 data = pd.read_csv("week-3/news-classification/data/train_small2.csv")
