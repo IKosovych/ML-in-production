@@ -8,7 +8,7 @@ import great_expectations
 from great_expectations.dataset.pandas_dataset import PandasDataset
 
 
-data = pd.read_csv("data/train_small2.csv")
+data = pd.read_csv("week-3/news-classification/data/train_small2.csv")
 df = great_expectations.dataset.PandasDataset(data)
 
 def test_expect_table_columns_to_match_ordered_list():

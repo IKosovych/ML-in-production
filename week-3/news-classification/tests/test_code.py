@@ -15,11 +15,6 @@ def test_load_model():
     assert isinstance(model, RobertaModel)
 
 
-def test_load_data():
-    data = load_data()
-    assert isinstance(data, pd.DataFrame)
-
-
 def test_train_test_split():
     data = load_data()
     train_data, test_data = train_test_split(data)
