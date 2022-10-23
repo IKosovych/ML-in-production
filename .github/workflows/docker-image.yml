@@ -58,6 +58,15 @@ jobs:
         run: |
           pip install pytest
           pip install pytest-cov
+          pip install numpy
+          pip install torch
+          pip install torchaudio
+          pip install torchtext
+          pip install torchvision
+          pip install wandb
+          pip install great-expectations
+          pip install transformers==4.22.2
+
           pytest week-3/news-classification/tests/test_data.py
           pytest week-3/news-classification/tests/test_code.py
           pytest week-3/news-classification/tests/test_model.py
