@@ -21,12 +21,12 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: week-3/
-          file: week-3/Dockerfile
+          context: 1/
+          file: week-1/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/week-3:latest    
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/week-3:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/week-3:buildcache,mode=max
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/week-1:latest    
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/week-1:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/week-1:buildcache,mode=max
 
   build-python:
     runs-on: ubuntu-latest
@@ -53,20 +53,10 @@ jobs:
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
-      
+
       - name: Test with pytest
         run: |
-          pip install pytest
-          pip install pytest-cov
-          pip install numpy
-          pip install torch
-          pip install torchaudio
-          pip install torchtext
-          pip install torchvision
-          pip install wandb
-          pip install great-expectations
-          pip install transformers==4.22.2
-
+          pip install -r week-3/requirements.txt
           pytest week-3/news-classification/tests/test_data.py
           pytest week-3/news-classification/tests/test_code.py
           pytest week-3/news-classification/tests/test_model.py
