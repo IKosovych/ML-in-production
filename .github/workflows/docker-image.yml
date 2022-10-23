@@ -58,7 +58,7 @@ jobs:
         run: |
           pip install pytest
           pip install pytest-cov
-          pytest news-classification/tests/tests_data.py
-          pytest news-classification/tests/tests_code.py
-          pytest news-classification/tests/tests_model.py
+          pytest news-classification/tests/test_data.py
+          pytest news-classification/tests/test_code.py
+          pytest news-classification/tests/test_model.py
 
