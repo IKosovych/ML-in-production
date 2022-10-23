@@ -17,7 +17,7 @@ def test_expect_table_columns_to_match_ordered_list():
     )
 
 
-@pytest.mark.parametrize("test_input, test_expected", [("data/train_small2.csv", 6)])
+@pytest.mark.parametrize("test_input, test_expected", [("week-3/news-classification/data/train_small2.csv", 6)])
 def test_data_shape(test_input, test_expected):
     data = pd.read_csv(test_input)
     assert data.shape[1] == test_expected
