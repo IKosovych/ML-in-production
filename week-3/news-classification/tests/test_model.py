@@ -14,4 +14,3 @@ def test_model():
     assert isinstance(model, RobertaModel)
     assert tokenizer.model_max_length == 512
     assert tokenizer.max_model_input_sizes == {'roberta-base': 512, 'roberta-large': 512, 'roberta-large-mnli': 512, 'distilroberta-base': 512, 'roberta-base-openai-detector': 512, 'roberta-large-openai-detector': 512}
-

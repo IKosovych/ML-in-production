@@ -20,15 +20,3 @@ def test_train_test_split():
     assert isinstance(train_data, pd.DataFrame)
     assert isinstance(test_data, pd.DataFrame)"""
     pass
-
-
-def test_model_embedding():
-    pass
-
-
-def test_get_embedding_list():
-    pass
-
-
-def test_distance():
-    pass
