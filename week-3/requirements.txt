@@ -7,3 +7,6 @@ torchsummary==1.5.1
 torchtext==0.13.1
 torchvision==0.13.1
 wandb==0.13.3
+great-expectations==0.15.15
+pytest==7.1.2
+pytest-cov==2.10.1

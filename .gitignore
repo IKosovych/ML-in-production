@@ -1,3 +1,4 @@
 env
 *.pytest_cache
 wandb
+*.DS_Store

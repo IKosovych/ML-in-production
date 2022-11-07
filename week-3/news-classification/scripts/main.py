@@ -11,6 +11,9 @@ def main():
     labels_list = train_data['target_numerical'].values
     descriptions_list = train_data['text'].values
     tokenizer, model = load_model()
+    print(f"tokenizer1 : {tokenizer.model_max_length}")
+    print(f"tokenizer2 : {tokenizer.max_model_input_sizes}")
+    print(f"tokenizer3 : {tokenizer.pretrained_init_configuration}")
     embeddings_list = get_embedding_list(labels_list, descriptions_list, tokenizer, model)
     test_labels_list = test_data['target_numerical'].values
     test_descriptions_list = test_data['text'].values
